@@ -16,3 +16,8 @@ body {
     margin: 0 1em;
     padding: 0;
 }
+
+.publicidade {
+    border: 1px solid #CCC;
+    background: 1px solid #F5F5F5;
+}
