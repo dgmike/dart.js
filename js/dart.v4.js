@@ -1,12 +1,16 @@
 "use strict";
 
-DEads = function () {}
+var DEads;
 
-DEads.prototype = {
-    add: function() {
+DEads = (function() {
+    function DEads() {
+        // constructor
     }
-}
+    DEads.add = function() {
+    }
+    return DEads;
+})();
 
-function DEshow() {
+function DEShow() {
 
 }
