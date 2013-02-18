@@ -1,6 +1,9 @@
 "use strict";
 
-var DEad, DEads;
+var DEad, DEads, vglAds;
+
+vglAds = [];
+
 
 // helper
 var isHTMLElement = (function () {
