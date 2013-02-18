@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charse="utf-8">
+        <title>dart v4</title>
+        <link rel="stylesheet" href="style/style.css" media="all">
+        <script src="js/dart.v4.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <h1>dart v4</h1>
+            <hr />
+            <p>Publicidade <code>(728x90, 1)</code></p>
+            <div data-publicidade="728x90, 1" class="deshow"></div>
+            <p>Publicidade <code>(300x250, 1)</code></p>
+            <script>DEShow('300x250', 1)</script>
+            <p>Publicidade <code>(120x30, 6)</code></p>
+            <div data-size="120x30" data-pos="6" rel="publicidade"></div>
+            <p>Publicidade <code>(300x600, 3)</code></p>
+            <script>DEads.add("300x600", 3)</script>
+            <p>Publicidades <code>(1x1, 11)</code> e <code>(1x1, 12)</code> juntas</p>
+            <script>DEShow("1x1", 11); DEShow("1x1", 12);</script>
+        </div>
+    </body>
+</html>
