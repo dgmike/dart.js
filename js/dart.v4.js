@@ -29,7 +29,13 @@ var isHTMLElement = (function () {
 
 DEad = (function() {
     function DEad(size, pos, elm) {
-
+        if (null === size || null === pos) {
+            throw "You must set size AND pos on try to add a new advertisement";
+        }
+        if (!(new RegExp('^\\d+x\\d+$')).test(size)) {
+            throw "The advertisement must be in <Int>x<Int> format. "
+                  + "Eg: 200x300" + " - passed: " + JSON.stringify(size)
+        }
     }
     return DEad;
 })();
@@ -41,14 +47,6 @@ DEads = (function() {
     DEads.add = function(size, pos, elm) {
         var vglAds, script, scripts;
         vglAds = window.vglAds;
-
-        if (null === size || null === pos) {
-            throw "You must set size AND pos on try to add a new advertisement";
-        }
-        if (!(new RegExp('^\\d+x\\d+$')).test(size)) {
-            throw "The advertisement must be in <Int>x<Int> format. "
-                  + "Eg: 200x300" + " - passed: " + JSON.stringify(size)
-        }
         if (!isHTMLElement(elm)) {
             elm = document.createElement('div');
             scripts = document.getElementsByTagName('script');
