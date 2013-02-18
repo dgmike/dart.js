@@ -1,6 +1,7 @@
 "use strict";
 
-var DEads;
+var DEad, DEads;
+
 // helper
 var isHTMLElement = (function () {
     if ("HTMLElement" in window) {
@@ -23,6 +24,12 @@ var isHTMLElement = (function () {
     }
 })();
 
+DEad = (function() {
+    function DEad(size, pos, elm) {
+
+    }
+    return DEad;
+})();
 
 DEads = (function() {
     function DEads() {
