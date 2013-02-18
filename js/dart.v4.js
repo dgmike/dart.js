@@ -49,6 +49,16 @@ DEads = (function() {
             throw "The advertisement must be in <Int>x<Int> format. "
                   + "Eg: 200x300" + " - passed: " + JSON.stringify(size)
         }
+        if (!isHTMLElement(elm)) {
+            elm = document.createElement('div');
+            scripts = document.getElementsByTagName('script');
+            script = scripts[scripts.length - 1];
+            elm.className = "publicidade";
+            elm.style.display = "block";
+            elm.style.height = size.split("x")[0] + "px";
+            elm.style.width = size.split("x")[1] + "px";
+            script.parentNode.appendChild(elm);
+        }
         vglAds.push(new DEad(size, pos, elm));
     }
     return DEads;
