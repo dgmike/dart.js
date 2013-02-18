@@ -44,5 +44,5 @@ DEads = (function() {
 })();
 
 function DEShow() {
-
+    DEads.add.apply(window, arguments);
 }
