@@ -38,7 +38,11 @@ DEads = (function() {
     function DEads() {
         // constructor
     }
-    DEads.add = function() {
+    DEads.add = function(size, pos, elm) {
+        var vglAds, script, scripts;
+        vglAds = window.vglAds;
+
+        vglAds.push(new DEad(size, pos, elm));
     }
     return DEads;
 })();
