@@ -34,8 +34,16 @@ DEad = (function() {
         }
         if (!(new RegExp('^\\d+x\\d+$')).test(size)) {
             throw "The advertisement must be in <Int>x<Int> format. "
-                  + "Eg: 200x300" + " - passed: " + JSON.stringify(size)
+                  + "Eg: 200x300" + " - passed: " + JSON.stringify(size);
         }
+        if (!isHTMLElement(elm)) {
+            throw "You must pass an valid HTML Element to create an advertisement";
+        }
+        size.height = parseInt(size.split("x")[0], 10);
+        size.width  = parseInt(size.split("x")[1], 10);
+        this.size = size;
+        this.pos  = pos;
+        this.elm  = elm;
     }
     return DEad;
 })();
