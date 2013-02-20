@@ -5,19 +5,45 @@ html {
 }
 
 body {
-    margin: 0 auto;
-    padding: 2em 0;
-    width: 990px;
+    margin: 0;
+    padding: 0;
     background: #FFF;
     font-family: sans-serif;
 }
 
-#container {
-    margin: 0 1em;
+
+#page {
+    margin: 0;
     padding: 0;
 }
 
+#container {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    z-index:1;
+    background: #FFF;
+    width:990px;
+    box-shadow: 0 0 40px #000;
+}
+
+h1, p, form {
+    margin: 0;
+    padding: 1em;
+}
+
 .publicidade {
-    border: 1px solid #CCC;
-    background: 1px solid #F5F5F5;
+    /*border: 1px solid #CCC;*/
+}
+
+#publicidade-728x90 {
+    margin: 0 auto;
+    position: relative;
+}
+
+.publicidade-dart-728x90 {
+    top: 0;
+    left: 0;
+    position:absolute;
+    /*z-index: 999999999999;*/
 }
